@@ -38,6 +38,7 @@ from preset_cli.lib import setup_logging
 @click.option("--client-id", default=None, help="Client ID")
 @click.option("--secret", default=None, help="Secret")
 @click.option("--token-url", default=None, help="Token URL")
+@click.option("--scope", default=None, help="Scope")
 @click.version_option()
 @click.pass_context
 def superset_cli(  # pylint: disable=too-many-arguments
@@ -50,6 +51,7 @@ def superset_cli(  # pylint: disable=too-many-arguments
     client_id: Optional[str] = None,
     secret: Optional[str] = None,
     token_url: Optional[str] = None,
+    scope: Optional[str] = None
 ):
     """
     An Apache Superset CLI.
@@ -65,7 +67,7 @@ def superset_cli(  # pylint: disable=too-many-arguments
         if jwt_token:
             ctx.obj["AUTH"] = SupersetJWTAuth(jwt_token, URL(instance))
         elif client_id:
-            ctx.obj["AUTH"] = SupersetOAuth(client_id, secret, token_url, URL(instance))
+            ctx.obj["AUTH"] = SupersetOAuth(client_id, secret, token_url, scope, URL(instance))
         else:
             ctx.obj["AUTH"] = UsernamePasswordAuth(URL(instance), username, password)
 

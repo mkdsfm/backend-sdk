@@ -81,7 +81,7 @@ class SupersetOAuth(Auth): # pylint: disable=abstract-method
     Auth to Superset via Client ID and Secret.
     """
 
-    def __init__(self, client_id: str, client_secret: str, token_url: URL, baseurl: URL):
+    def __init__(self, client_id: str, client_secret: str, token_url: URL, scope: str, baseurl: URL):
         super().__init__()
 
         self.baseurl = baseurl
@@ -89,6 +89,7 @@ class SupersetOAuth(Auth): # pylint: disable=abstract-method
         self.client_secret = client_secret
         self.token_url = token_url
         self.access_token = ""
+        self.scope = scope
         self.auth()
 
     def get_headers(self) -> Dict[str, str]:
@@ -109,4 +110,4 @@ class SupersetOAuth(Auth): # pylint: disable=abstract-method
         return payload["result"]
 
     def auth(self) -> None:
-        self.access_token = get_oauth_access_token(self.client_id, self.client_secret, self.token_url)
+        self.access_token = get_oauth_access_token(self.client_id, self.client_secret, self.token_url, self.scope)

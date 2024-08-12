@@ -70,10 +70,10 @@ def store_credentials(
             break
 
 
-def get_oauth_access_token(client_id, client_secret, token_url) -> str:
+def get_oauth_access_token(client_id, client_secret, token_url, scope) -> str:
     payload = {
         'grant_type': 'client_credentials',
-        'scope': 'roles dashboards scopes:read positions:read openid profile'
+        'scope': scope
     }
     auth = HTTPBasicAuth(client_id, client_secret)
     headers = {
