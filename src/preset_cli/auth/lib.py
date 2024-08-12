@@ -84,11 +84,10 @@ def get_oauth_access_token(client_id, client_secret, token_url) -> str:
     }
     auth = HTTPBasicAuth(client_id, client_secret)
     headers = {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': f'Basic {auth}'
+        'Content-Type': 'application/x-www-form-urlencoded'
     }
 
-    response = requests.post(token_url, data=payload, headers=headers)
+    response = requests.post(token_url, data=payload, headers=headers, auth=auth)
 
     if response.status_code == 200:
         token_data = response.json()

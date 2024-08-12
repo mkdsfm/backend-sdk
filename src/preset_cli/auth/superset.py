@@ -3,7 +3,6 @@ Mechanisms for authentication and authorization for Superset instances.
 """
 
 from typing import Dict, Optional
-import logging
 
 from bs4 import BeautifulSoup
 from yarl import URL
@@ -11,8 +10,6 @@ from yarl import URL
 from preset_cli.auth.main import Auth
 from preset_cli.auth.token import TokenAuth
 from preset_cli.auth.lib import get_oauth_access_token
-
-_logger = logging.getLogger(__name__)
 
 
 class UsernamePasswordAuth(Auth):  # pylint: disable=too-few-public-methods
@@ -112,6 +109,4 @@ class SupersetOAuth(Auth): # pylint: disable=abstract-method
         return payload["result"]
 
     def auth(self) -> None:
-        
-        _logger.debug(f"{self.client_id}, {self.token_url}")
         self.access_token = get_oauth_access_token(self.client_id, self.client_secret, self.token_url)
