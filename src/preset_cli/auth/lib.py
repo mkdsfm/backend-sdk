@@ -70,15 +70,28 @@ def store_credentials(
             break
 
 
-def get_oauth_access_token(client_id, client_secret, token_url):
-    auth = HTTPBasicAuth(client_id, client_secret)
-    data = {
-        'grant_type': 'client_credentials'
+def get_oauth_access_token(client_id, client_secret, token_url) -> str:
+    payload = {
+        'grant_type': 'client_credentials',
+        'client_id': client_id,
+        'client_secret': client_secret,
+        'scope': ' '.join([
+            'roles',
+            'profile',
+            'openid',
+            'positions:read',
+            'scopes:read',
+            'dashboards'
+        ])
     }
-    response = requests.post(token_url, auth=auth, data=data)
+    headers = {
+        'Content-Type': 'application/x-www-form-urlencoded'
+    }
+    response = requests.post(token_url, data=payload, headers=headers)
 
     if response.status_code == 200:
-        token = response.json().get('access_token')
-        return token
+        token_data = response.json()
+        access_token = token_data['access_token']
+        return access_token
     else:
-        raise Exception(f"Failed to obtain token: {response.status_code}, {response.text}")
+        raise Exception(f"Failed to obtain access token. Status code: {response.status_code}, text: {response.text}")
