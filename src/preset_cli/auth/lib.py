@@ -73,8 +73,6 @@ def store_credentials(
 def get_oauth_access_token(client_id, client_secret, token_url) -> str:
     payload = {
         'grant_type': 'client_credentials',
-        'client_id': client_id,
-        'client_secret': client_secret,
         'scope': ' '.join([
             'roles',
             'profile',
@@ -84,9 +82,12 @@ def get_oauth_access_token(client_id, client_secret, token_url) -> str:
             'dashboards'
         ])
     }
+    auth = HTTPBasicAuth(client_id, client_secret)
     headers = {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': f'Basic {auth}'
     }
+
     response = requests.post(token_url, data=payload, headers=headers)
 
     if response.status_code == 200:
