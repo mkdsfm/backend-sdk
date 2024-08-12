@@ -73,14 +73,7 @@ def store_credentials(
 def get_oauth_access_token(client_id, client_secret, token_url) -> str:
     payload = {
         'grant_type': 'client_credentials',
-        'scope': ' '.join([
-            'roles',
-            'profile',
-            'openid',
-            'positions:read',
-            'scopes:read',
-            'dashboards'
-        ])
+        'scope': 'roles dashboards scopes:read positions:read openid profile'
     }
     auth = HTTPBasicAuth(client_id, client_secret)
     headers = {
