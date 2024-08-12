@@ -10,6 +10,8 @@ import yaml
 from appdirs import user_config_dir
 from yarl import URL
 
+from requests.auth import HTTPBasicAuth
+
 CREDENTIALS_FILE = "credentials.yaml"
 
 
@@ -66,3 +68,17 @@ def store_credentials(
 
         if store.strip().lower() in ("n", ""):
             break
+
+
+def get_oauth_access_token(client_id, client_secret, token_url):
+    auth = HTTPBasicAuth(client_id, client_secret)
+    data = {
+        'grant_type': 'client_credentials'
+    }
+    response = requests.post(token_url, auth=auth, data=data)
+
+    if response.status_code == 200:
+        token = response.json().get('access_token')
+        return token
+    else:
+        raise Exception(f"Failed to obtain token: {response.status_code}, {response.text}")
