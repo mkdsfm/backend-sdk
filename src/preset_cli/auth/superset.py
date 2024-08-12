@@ -11,6 +11,7 @@ from preset_cli.auth.main import Auth
 from preset_cli.auth.token import TokenAuth
 from preset_cli.auth.lib import get_oauth_access_token
 
+
 class UsernamePasswordAuth(Auth):  # pylint: disable=too-few-public-methods
     """
     Auth to Superset via username/password.

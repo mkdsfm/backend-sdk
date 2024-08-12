@@ -10,7 +10,6 @@ import yaml
 from appdirs import user_config_dir
 from yarl import URL
 
-import requests
 from requests.auth import HTTPBasicAuth
 
 CREDENTIALS_FILE = "credentials.yaml"
@@ -43,10 +42,10 @@ def get_credentials_path() -> Path:
 
 
 def store_credentials(
-        api_token: str,
-        api_secret: str,
-        manager_url: URL,
-        credentials_path: Path,
+    api_token: str,
+    api_secret: str,
+    manager_url: URL,
+    credentials_path: Path,
 ) -> None:
     """
     Store credentials.
