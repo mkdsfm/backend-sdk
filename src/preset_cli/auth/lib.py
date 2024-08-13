@@ -72,10 +72,10 @@ def store_credentials(
 
 
 def get_oauth_access_token(client_id, client_secret, token_url, scope) -> str:
-    payload = [('grant_type', 'client_credentials')]
-    scopes = scope.split()
-    for item in scopes:
-        payload.append(('scope', item))
+    payload = {
+        "grant_type": "client_credentials",
+        "scope": scope
+    }
 
     data = urlencode(payload)
     auth = HTTPBasicAuth(client_id, client_secret)
