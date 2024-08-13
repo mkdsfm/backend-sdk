@@ -93,21 +93,19 @@ class SupersetOAuth(Auth): # pylint: disable=abstract-method
         self.auth()
 
     def get_headers(self) -> Dict[str, str]:
-        return {
-            "X-CSRFToken": self.get_csrf_token(self.access_token)
-        }
-
-    def get_csrf_token(self, access_token: str) -> str:
-        """
-        Get a CSRF token.
-        """
         response = self.session.get(
             self.baseurl / "api/v1/security/csrf_token/",  # type: ignore
-            headers={"Authorization": f"Bearer {access_token}"},
-        )
+            headers={"Authorization": f"Bearer {self.access_token}"},
+            )
         response.raise_for_status()
+
+        cookie = response.headers.get('Set-Cookie').split(';')[0]
         payload = response.json()
-        return payload["result"]
+
+        return {
+            "X-CSRFToken": payload["result"],
+            "Cookie": cookie
+        }
 
     def auth(self) -> None:
         self.access_token = get_oauth_access_token(self.client_id, self.client_secret, self.token_url, self.scope)
