@@ -1,0 +1,38 @@
+slice_name: Vaccine Candidates per Phase
+description: null
+certified_by: null
+certification_details: null
+viz_type: dist_bar
+params:
+  adhoc_filters: []
+  bottom_margin: auto
+  color_scheme: SUPERSET_DEFAULT
+  columns: []
+  datasource: 14__table
+  groupby:
+  - clinical_stage
+  label_colors: {}
+  metrics:
+  - count
+  row_limit: 10000
+  show_legend: false
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_ticks_layout: auto
+  y_axis_format: SMART_NUMBER
+query_context: '{"datasource": {"id": 23, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "filters": [], "extras": {"having": "", "where": ""},
+  "applied_time_extras": {}, "columns": ["clinical_stage"], "metrics": ["count"],
+  "annotation_layers": [], "row_limit": 10000, "series_limit": 0, "order_desc": true,
+  "url_params": {}, "custom_params": {}, "custom_form_data": {}}], "form_data": {"adhoc_filters":
+  [], "bottom_margin": "auto", "color_scheme": "SUPERSET_DEFAULT", "columns": [],
+  "datasource": "23__table", "groupby": ["clinical_stage"], "label_colors": {}, "metrics":
+  ["count"], "row_limit": 10000, "show_legend": false, "slice_id": 81, "time_range":
+  "No filter", "url_params": {}, "viz_type": "dist_bar", "x_ticks_layout": "auto",
+  "y_axis_format": "SMART_NUMBER", "force": false, "result_format": "json", "result_type":
+  "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 392f293e-0892-4316-bd41-c927b65606a4
+version: 1.0.0
+dataset_uuid: 974b7a1c-22ea-49cb-9214-97b7dbd511e0

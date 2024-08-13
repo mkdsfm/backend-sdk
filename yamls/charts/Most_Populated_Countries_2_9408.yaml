@@ -1,0 +1,49 @@
+slice_name: Most Populated Countries 2
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 2__table
+  viz_type: table
+  slice_id: 9407
+  granularity_sqla: year
+  time_range: '2014-01-01 : 2014-01-02'
+  query_mode: aggregate
+  groupby:
+  - country_name
+  metrics:
+  - sum__SP_POP_TOTL
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  row_limit: 10000000
+  server_page_length: 10
+  order_desc: true
+  show_totals: false
+  table_timestamp_format: smart_date
+  page_length: 10
+  show_cell_bars: true
+  color_pn: true
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource": {"id": 2, "type": "table"}, "force": false, "queries":
+  [{"time_range": "2014-01-01 : 2014-01-02", "granularity": "year", "filters": [],
+  "extras": {"having": "", "where": ""}, "applied_time_extras": {}, "columns": ["country_name"],
+  "metrics": ["sum__SP_POP_TOTL"], "orderby": [["sum__SP_POP_TOTL", false]], "annotation_layers":
+  [], "row_limit": 10000000, "series_limit": 0, "order_desc": true, "url_params":
+  {}, "custom_params": {}, "custom_form_data": {}, "post_processing": []}], "form_data":
+  {"datasource": "2__table", "viz_type": "table", "slice_id": 9407, "granularity_sqla":
+  "year", "time_range": "2014-01-01 : 2014-01-02", "query_mode": "aggregate", "groupby":
+  ["country_name"], "metrics": ["sum__SP_POP_TOTL"], "all_columns": [], "percent_metrics":
+  [], "adhoc_filters": [], "order_by_cols": [], "row_limit": 10000000, "server_page_length":
+  10, "order_desc": true, "show_totals": false, "table_timestamp_format": "smart_date",
+  "page_length": 10, "show_cell_bars": true, "color_pn": true, "conditional_formatting":
+  [], "extra_form_data": {}, "dashboards": [], "force": false, "result_format": "json",
+  "result_type": "full"}, "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: f8badfa4-813f-4e8e-a703-20292b7b72d0
+version: 1.0.0
+dataset_uuid: a430d917-f805-4fff-acb2-19135fa7b154

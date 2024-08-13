@@ -1,0 +1,143 @@
+dashboard_title: Misc Charts
+description: null
+css: null
+slug: misc_charts
+uuid: 9c30b6f3-b925-468f-b08b-ed4d5417c046
+position:
+  CHART-BkeVbh8ANQ:
+    children: []
+    id: CHART-BkeVbh8ANQ
+    meta:
+      chartId: 16342
+      height: 34
+      sliceName: Multi Line
+      width: 8
+      uuid: 72007841-0ae6-4fcc-a6d5-4dcc0ea0ff02
+    type: CHART
+  CHART-H1HYNzEANX:
+    children: []
+    id: CHART-H1HYNzEANX
+    meta:
+      chartId: 3940
+      height: 50
+      sliceName: Energy Sankey
+      width: 6
+    type: CHART
+  CHART-HJOYVMV0E7:
+    children: []
+    id: CHART-HJOYVMV0E7
+    meta:
+      chartId: 16310
+      height: 63
+      sliceName: Mapbox Long/Lat
+      width: 6
+      uuid: f80c145e-5cfa-4cf8-82ac-39c456e542cf
+    type: CHART
+  CHART-S1WYNz4AVX:
+    children: []
+    id: CHART-S1WYNz4AVX
+    meta:
+      chartId: 16322
+      height: 25
+      sliceName: Parallel Coordinates
+      width: 4
+      uuid: 771d3b2f-0ead-45c7-a639-1609e607efbb
+    type: CHART
+  CHART-r19KVMNCE7:
+    children: []
+    id: CHART-r19KVMNCE7
+    meta:
+      chartId: 3971
+      height: 34
+      sliceName: Calendar Heatmap multiformat 0
+      width: 4
+    type: CHART
+  CHART-rJ4K4GV04Q:
+    children: []
+    id: CHART-rJ4K4GV04Q
+    meta:
+      chartId: 3941
+      height: 63
+      sliceName: Energy Force Layout
+      width: 6
+    type: CHART
+  CHART-rkgF4G4A4X:
+    children: []
+    id: CHART-rkgF4G4A4X
+    meta:
+      chartId: 16311
+      height: 25
+      sliceName: Birth in France by department in 2016
+      width: 8
+      uuid: ab5d9fb5-38c5-49e0-a481-580e6052b5d2
+    type: CHART
+  CHART-rywK4GVR4X:
+    children: []
+    id: CHART-rywK4GVR4X
+    meta:
+      chartId: 3942
+      height: 50
+      sliceName: Heatmap
+      width: 6
+    type: CHART
+  COLUMN-ByUFVf40EQ:
+    children:
+    - CHART-rywK4GVR4X
+    - CHART-HJOYVMV0E7
+    id: COLUMN-ByUFVf40EQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    type: COLUMN
+  COLUMN-rkmYVGN04Q:
+    children:
+    - CHART-rJ4K4GV04Q
+    - CHART-H1HYNzEANX
+    id: COLUMN-rkmYVGN04Q
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    type: COLUMN
+  GRID_ID:
+    children:
+    - ROW-SytNzNA4X
+    - ROW-S1MK4M4A4X
+    - ROW-HkFFEzVRVm
+    id: GRID_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Misc Charts
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-HkFFEzVRVm:
+    children:
+    - CHART-r19KVMNCE7
+    - CHART-BkeVbh8ANQ
+    id: ROW-HkFFEzVRVm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-S1MK4M4A4X:
+    children:
+    - COLUMN-rkmYVGN04Q
+    - COLUMN-ByUFVf40EQ
+    id: ROW-S1MK4M4A4X
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-SytNzNA4X:
+    children:
+    - CHART-rkgF4G4A4X
+    - CHART-S1WYNz4AVX
+    id: ROW-SytNzNA4X
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  DASHBOARD_VERSION_KEY: v2
+version: 1.0.0

@@ -1,0 +1,89 @@
+table_name: http://46.161.36.218:30640/mileages/aggregatew/
+main_dttm_col: dateEnd
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: 186400
+schema: main
+sql: "SELECT *\r\nFROM \"http://46.161.36.218:30640/mileages/aggregatew/?_method='POST'&_s_headers=(Authorization:'Bearer\
+  \ {{ '{{' }} token {{ '}}' }}')\""
+params: null
+template_params:
+  token: eyJhbGciOiJSUzI1NiIsImtpZCI6IkNEQzQyMzA1QkFEMzkyNzJFNTREMTdGN0JBODM0MERBN0MzQTA5NUEiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJ6Y1FqQmJyVGtuTGxUUmYzdW9OQTJudzZDVm8ifQ.eyJuYW1lIjoi0KLQtdGB0YLQlNCw0YjQsdC-0YDQtNCwIiwic3ViIjoibS5hbmRyZWV2LkRAbS5hbmRyZWV2IiwiaWQiOiI3ODY5MDAiLCJ6b25laW5mbyI6IkV1cm9wZS9Nb3Njb3ciLCJsb2NhbGUiOiJydSIsInNpZCI6ImViZGVkYjVjLWJmMWQtNDdkNi1hOTBlLTE3NjhkMjhhNjNkZSIsImlzX2V4dCI6IkZhbHNlIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2OTU3MTUyNDUsImV4cCI6MTY5NTc0NDA0NSwiaWF0IjoxNjk1NzE1MjQ1LCJpc3MiOiJhdXRob3JpemF0aW9uLXNlcnZlciIsImF1ZCI6InNjb3V0In0.g31ZVzsZBhxUeRX1xNvLlHhB9yWJvrGjXEwxYCwjkyeHqfIEXjYLARvGQSeTzMQTrw0kRkQCUz78U5zA0gEuNye1BVHvncBZrwQ8V-MP_Uza86uT_gS74FP712uKiUK0nem9FuJ1oPwt5CvRNGsIqTunEZjAlMNFThT9G-AHQEYJ5XRWkHxwvkLHBXTrCsul3NsFQGO4MS0G_5u3pwCF_0ikSU7anc-QlxEzaZQcKkXKq6Oj2t_mFEdGL2EjRT1M7msYYoZXmnXH7eJm1WTBvc5sqVHZeJ8K_4a4fREFLJBELsxR4T-cNq1WnEJmDV-tPhhyU9jZshkFZiD7TFC6qw
+filter_select_enabled: false
+fetch_values_predicate: null
+extra: null
+uuid: be231357-5a00-4561-b005-7758500eacca
+metrics:
+- metric_name: count
+  verbose_name: null
+  metric_type: null
+  expression: count(*)
+  description: null
+  d3format: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: dateEnd
+  verbose_name: "\u041D\u0435\u0434\u0435\u043B\u044F"
+  is_dttm: true
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: avgMileage
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: totalMileage
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: timeZoneOffset
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: activeUnits
+  verbose_name: null
+  is_dttm: false
+  is_active: null
+  type: INT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: fe1710ff-33b3-4542-82ec-005a84cd2f50

@@ -1,0 +1,153 @@
+dashboard_title: test interactive
+description: null
+css: ''
+slug: test_interactive
+uuid: be5fe571-1c05-4ce3-b805-e8474257d960
+position:
+  CHART-LyQxP_gLOS:
+    children: []
+    id: CHART-LyQxP_gLOS
+    meta:
+      chartId: 139
+      height: 48
+      sliceName: Top Timezones test interactive
+      uuid: 44c9bb79-8d2f-418c-938b-3a8334c250fb
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-R7Rv3oqKLa
+    type: CHART
+  CHART-Y504PQR2:
+    children: []
+    id: CHART-Y504PQR2
+    meta:
+      chartId: 138
+      height: 50
+      sliceName: tz
+      uuid: 46960124-ff2d-4c3a-a1a5-e95006f1f6f2
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-J7ENL316
+    type: CHART
+  CHART-q138d6xSX7:
+    children: []
+    id: CHART-q138d6xSX7
+    meta:
+      chartId: 3378
+      height: 50
+      sliceName: JJJJ
+      uuid: 4d56dead-f58a-4b53-a521-6a68be87cf90
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-J7ENL316
+    type: CHART
+  CHART-qd_ilKSkOr:
+    children: []
+    id: CHART-qd_ilKSkOr
+    meta:
+      chartId: 122
+      height: 62
+      sliceName: Games per Genre
+      uuid: 0499bdec-0837-44f3-ae8a-8c670de81afd
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-R7Rv3oqKLa
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-R7Rv3oqKLa
+    - ROW-N-J7ENL316
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: test interactive
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-N-J7ENL316:
+    children:
+    - CHART-Y504PQR2
+    - CHART-q138d6xSX7
+    id: ROW-N-J7ENL316
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-R7Rv3oqKLa:
+    children:
+    - CHART-LyQxP_gLOS
+    - CHART-qd_ilKSkOr
+    id: ROW-R7Rv3oqKLa
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  show_native_filters: true
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: false
+  default_filters: '{}'
+  chart_configuration:
+    '138':
+      id: 138
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 138
+        chartsInScope:
+        - 122
+        - 139
+        - 3378
+    '139':
+      id: 139
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 139
+        chartsInScope:
+        - 122
+        - 138
+        - 3378
+    '3378':
+      id: 3378
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 3378
+        chartsInScope:
+        - 122
+        - 138
+        - 139
+  shared_label_colors: {}
+  color_scheme_domain: []
+version: 1.0.0

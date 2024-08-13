@@ -1,0 +1,88 @@
+slice_name: Games
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 9__table
+  viz_type: table
+  slice_id: 123
+  granularity_sqla: year
+  time_grain_sqla: P1D
+  time_range: No filter
+  query_mode: raw
+  groupby:
+  - name
+  metrics:
+  - aggregate: SUM
+    column:
+      column_name: global_sales
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 887
+      is_dttm: false
+      optionName: _col_Global_Sales
+      python_date_format: null
+      type: DOUBLE PRECISION
+      verbose_name: null
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    isNew: false
+    label: SUM(Global_Sales)
+    optionName: metric_pkpvgdsf70d_pnqv77v0x2p
+    sqlExpression: null
+  all_columns:
+  - name
+  - global_sales
+  - platform
+  - genre
+  - publisher
+  - year
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols:
+  - '["global_sales", false]'
+  server_pagination: true
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  page_length: '15'
+  include_search: true
+  show_cell_bars: false
+  color_pn: false
+  extra_form_data: {}
+  dashboards: []
+query_context: '{"datasource": {"id": 9, "type": "table"}, "force": false, "queries":
+  [{"time_range": "No filter", "granularity": "year", "filters": [], "extras": {"time_grain_sqla":
+  "P1D", "having": "", "where": ""}, "applied_time_extras": {}, "columns": ["name",
+  "global_sales", "platform", "genre", "publisher", "year"], "orderby": [["global_sales",
+  false]], "annotation_layers": [], "row_limit": 10, "row_offset": 0, "series_limit":
+  0, "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data":
+  {}, "post_processing": []}, {"time_range": "No filter", "granularity": "year", "filters":
+  [], "extras": {"time_grain_sqla": "P1D", "having": "", "where": ""}, "applied_time_extras":
+  {}, "columns": ["name", "global_sales", "platform", "genre", "publisher", "year"],
+  "orderby": [["global_sales", false]], "annotation_layers": [], "row_limit": 0, "row_offset":
+  0, "series_limit": 0, "order_desc": true, "url_params": {}, "custom_params": {},
+  "custom_form_data": {}, "post_processing": [], "is_rowcount": true}], "form_data":
+  {"datasource": "9__table", "viz_type": "table", "slice_id": 123, "granularity_sqla":
+  "year", "time_grain_sqla": "P1D", "time_range": "No filter", "query_mode": "raw",
+  "groupby": ["name"], "metrics": [{"aggregate": "SUM", "column": {"column_name":
+  "global_sales", "description": null, "expression": null, "filterable": true, "groupby":
+  true, "id": 887, "is_dttm": false, "optionName": "_col_Global_Sales", "python_date_format":
+  null, "type": "DOUBLE PRECISION", "verbose_name": null}, "expressionType": "SIMPLE",
+  "hasCustomLabel": false, "isNew": false, "label": "SUM(Global_Sales)", "optionName":
+  "metric_pkpvgdsf70d_pnqv77v0x2p", "sqlExpression": null}], "all_columns": ["name",
+  "global_sales", "platform", "genre", "publisher", "year"], "percent_metrics": [],
+  "adhoc_filters": [], "order_by_cols": ["[\"global_sales\", false]"], "server_pagination":
+  true, "row_limit": 1000, "server_page_length": 10, "include_time": false, "order_desc":
+  true, "table_timestamp_format": "smart_date", "page_length": "15", "include_search":
+  true, "show_cell_bars": false, "color_pn": false, "extra_form_data": {}, "dashboards":
+  [], "force": false, "result_format": "json", "result_type": "full"}, "result_format":
+  "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 7ec0b129-a317-425e-9673-0aacdc39e748
+version: 1.0.0
+dataset_uuid: 53d47c0c-c03d-47f0-b9ac-81225f808283

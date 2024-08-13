@@ -1,0 +1,302 @@
+dashboard_title: World Bank's Data
+description: null
+css: ''
+slug: world_health
+uuid: 0764464e-9a15-4de6-a4f4-ed788c90dd23
+position:
+  CHART-36bfc934:
+    children: []
+    id: CHART-36bfc934
+    meta:
+      chartId: 16312
+      height: 25
+      sliceName: Region Filter
+      width: 2
+      uuid: 68bf8778-94fc-48ce-af69-12ee58b48b0e
+    type: CHART
+  CHART-37982887:
+    children: []
+    id: CHART-37982887
+    meta:
+      chartId: 16313
+      height: 25
+      sliceName: World's Population
+      width: 2
+      uuid: 5e2efc31-e618-4efa-b470-968ed767a790
+    type: CHART
+  CHART-17e0f8d8:
+    children: []
+    id: CHART-17e0f8d8
+    meta:
+      chartId: 16314
+      height: 92
+      sliceName: Most Populated Countries
+      width: 3
+      uuid: c9cbedec-f907-4ada-b70a-16b2cec99cc1
+    type: CHART
+  CHART-2ee52f30:
+    children: []
+    id: CHART-2ee52f30
+    meta:
+      chartId: 16315
+      height: 38
+      sliceName: Growth Rate
+      width: 6
+      uuid: 2463a916-d9be-4ea9-9a1b-197ba61b17ce
+    type: CHART
+  CHART-2d5b6871:
+    children: []
+    id: CHART-2d5b6871
+    meta:
+      chartId: 16316
+      height: 52
+      sliceName: '% Rural'
+      width: 7
+      uuid: f97d2bf7-7057-46c1-b7bc-79ee9b014fd7
+    type: CHART
+  CHART-0fd0d252:
+    children: []
+    id: CHART-0fd0d252
+    meta:
+      chartId: 16317
+      height: 50
+      sliceName: Life Expectancy VS Rural %
+      width: 8
+      uuid: a80c7898-f5ed-4ab8-98f0-233fdf4343b3
+    type: CHART
+  CHART-97f4cb48:
+    children: []
+    id: CHART-97f4cb48
+    meta:
+      chartId: 16318
+      height: 38
+      sliceName: Rural Breakdown
+      width: 3
+      uuid: 17a6bd10-e71c-4f86-8263-fe13333c5a3e
+    type: CHART
+  CHART-b5e05d6f:
+    children: []
+    id: CHART-b5e05d6f
+    meta:
+      chartId: 16319
+      height: 50
+      sliceName: World's Pop Growth
+      width: 4
+      uuid: 9670a51b-0d93-42f9-8a52-9efb30616ffc
+    type: CHART
+  CHART-e76e9f5f:
+    children: []
+    id: CHART-e76e9f5f
+    meta:
+      chartId: 16320
+      height: 50
+      sliceName: Box plot
+      width: 4
+      uuid: e5e6d761-315f-4493-94b0-5819adef0afc
+    type: CHART
+  CHART-a4808bba:
+    children: []
+    id: CHART-a4808bba
+    meta:
+      chartId: 16321
+      height: 50
+      sliceName: Treemap
+      width: 8
+      uuid: c677fb36-ac21-4471-82fb-a9a7c97844b2
+    type: CHART
+  COLUMN-071bbbad:
+    children:
+    - ROW-1e064e3c
+    - ROW-afdefba9
+    id: COLUMN-071bbbad
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 9
+    type: COLUMN
+  COLUMN-fe3914b8:
+    children:
+    - CHART-36bfc934
+    - CHART-37982887
+    id: COLUMN-fe3914b8
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    type: COLUMN
+  GRID_ID:
+    children:
+    - ROW-46632bc2
+    - ROW-3fa26c5d
+    - ROW-812b3f13
+    id: GRID_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: World's Bank Data
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-1e064e3c:
+    children:
+    - COLUMN-fe3914b8
+    - CHART-2d5b6871
+    id: ROW-1e064e3c
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-3fa26c5d:
+    children:
+    - CHART-b5e05d6f
+    - CHART-0fd0d252
+    id: ROW-3fa26c5d
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-46632bc2:
+    children:
+    - COLUMN-071bbbad
+    - CHART-17e0f8d8
+    id: ROW-46632bc2
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-812b3f13:
+    children:
+    - CHART-a4808bba
+    - CHART-e76e9f5f
+    id: ROW-812b3f13
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-afdefba9:
+    children:
+    - CHART-2ee52f30
+    - CHART-97f4cb48
+    id: ROW-afdefba9
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  DASHBOARD_VERSION_KEY: v2
+metadata:
+  show_native_filters: true
+  chart_configuration:
+    '9368':
+      id: 9368
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 9368
+        chartsInScope:
+        - 9366
+        - 9367
+        - 9369
+        - 9370
+        - 9371
+        - 9372
+        - 9373
+        - 9374
+        - 9375
+    '9374':
+      id: 9374
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 9374
+        chartsInScope:
+        - 9366
+        - 9367
+        - 9368
+        - 9369
+        - 9370
+        - 9371
+        - 9372
+        - 9373
+        - 9375
+    '14483':
+      id: 14483
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 14483
+        chartsInScope:
+        - 14481
+        - 14482
+        - 14484
+        - 14485
+        - 14486
+        - 14487
+        - 14488
+        - 14489
+        - 14490
+    '14489':
+      id: 14489
+      crossFilters:
+        scope:
+          rootPath:
+          - ROOT_ID
+          excluded:
+          - 14489
+        chartsInScope:
+        - 14481
+        - 14482
+        - 14483
+        - 14484
+        - 14485
+        - 14486
+        - 14487
+        - 14488
+        - 14490
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  shared_label_colors: {}
+  color_scheme_domain: []
+  native_filter_configuration:
+  - id: NATIVE_FILTER-7DGJj98I4
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: name
+    filterType: filter_select
+    targets:
+    - column:
+        name: name
+      datasetUuid: b04f2fc3-ef74-44e8-9bd8-d1896ab9e59c
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded:
+      - 14481
+      - 14482
+      - 14483
+      - 14484
+      - 14485
+      - 14486
+      - 14487
+      - 14488
+      - 14489
+      - 14490
+    type: NATIVE_FILTER
+    description: ''
+version: 1.0.0
