@@ -11,6 +11,7 @@ from appdirs import user_config_dir
 from yarl import URL
 
 from requests.auth import HTTPBasicAuth
+from urllib.parse import urlencode
 
 CREDENTIALS_FILE = "credentials.yaml"
 
@@ -71,20 +72,22 @@ def store_credentials(
 
 
 def get_oauth_access_token(client_id, client_secret, token_url, scope) -> str:
-    payload = {
-        'grant_type': 'client_credentials',
-        'scope': scope
-    }
+    payload = [('grant_type', 'client_credentials')]
+    scopes = scope.split()
+    for item in scopes:
+        payload.append(('scope', item))
+
+    data = urlencode(payload)
     auth = HTTPBasicAuth(client_id, client_secret)
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
     }
 
-    response = requests.post(token_url, data=payload, headers=headers, auth=auth)
+    response = requests.post(token_url, data=data, headers=headers, auth=auth)
 
     if response.status_code == 200:
         token_data = response.json()
-        access_token = token_data['access_token']
+        access_token = token_data.get('access_token', '')
         return access_token
     else:
         raise Exception(f"Failed to obtain access token. Status code: {response.status_code}, text: {response.text}")
