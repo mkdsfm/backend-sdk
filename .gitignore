@@ -56,3 +56,6 @@ MANIFEST
 .pyre/
 .pyre_configuration
 .watchmanconfig
+
+.env
+/yamls/zips/*
