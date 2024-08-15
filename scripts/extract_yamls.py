@@ -1,7 +1,6 @@
 import os
 import zipfile
 import argparse
-import yaml
 
 
 def extract_datasets_from_zip(zip_folder, output_folder, yaml_folder=None):
@@ -40,25 +39,9 @@ def extract_datasets_from_zip(zip_folder, output_folder, yaml_folder=None):
                         # Создаем нужные директории на выходе
                         os.makedirs(os.path.dirname(extract_path), exist_ok=True)
 
-                        # Извлекаем содержимое файла
-                        with zip_ref.open(zip_info) as zip_file:
-                            file_data = zip_file.read()
-
-                            # Если это YAML-файл, читаем и переименовываем по UUID
-                            if filename.endswith('.yaml'):
-                                try:
-                                    yaml_content = yaml.safe_load(file_data)
-                                    uuid = yaml_content.get('uuid')  # Предполагается, что UUID находится по ключу 'uuid'
-                                    if uuid:
-                                        # Переименовываем файл в соответствии с UUID
-                                        new_file_name = f"{uuid}.yaml"
-                                        extract_path = os.path.join(output_folder, dirname, new_file_name)
-                                except yaml.YAMLError as exc:
-                                    print(f"Ошибка при обработке YAML-файла {extract_path}: {exc}")
-
-                            # Сохраняем файл с нужным именем
-                            with open(extract_path, 'wb') as out_file:
-                                out_file.write(file_data)
+                        # Извлекаем файл в указанное место
+                        with open(extract_path, 'wb') as out_file:
+                            out_file.write(zip_ref.read(zip_info.filename))
 
 
 if __name__ == "__main__":
